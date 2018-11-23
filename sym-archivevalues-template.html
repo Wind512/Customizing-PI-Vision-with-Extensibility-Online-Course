@@ -1,0 +1,10 @@
+<div ng-style="{ 'background-color': config.BackgroundColor, 'border-radius': config.BorderRadius + 'px'}">
+	<h3> Debit deviation from the plan,</h3>
+	<h3> total deviations: {{Values.length}} </h3>
+	<h5> {{Label}}, {{Units}} </h5>
+	<br>
+	<div ng-repeat='item in Values' ng-show="item.Value > 4.1">
+		{{item.Time}}, {{item.Value | number: config.DisplayDigits}}
+	</div>	
+</div>
+
